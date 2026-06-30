@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foot-App</title>
+ 
+  <!--Tailwind-->
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!--Bootstrap--> 
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body class="p-2">
+ <header class="flex p-4 bg-gray-50 justify-between shadow shadow-md">
+  <div>
+    <span class="bg-red-400 text-white p-1 rounded rounded-lg"><span class="bi bi-fork-knife"></span></span>
+  <span class="font-bold">FoodApp</span>
+  </div>
+  
+  <nav>
+    <span class="text-red-500">Home</span>
+    <span class="mx-5">Restaurants</span>
+    <span>Offers</span>
+    <span class="mx-5">Support</span>
+  </nav>
+  <div class="relative">
+    <span class="bi bi-search absolute left-3 p-1"></span><input type="text" placeholder="Search for food and Restaurants" class="rounded text-right w-70 p-1 bg-gray-200 rounded-lg">
+  </div>
+  <div>
+    <button class="bi bi-cart3 relative text-xl"><span class="absolute bg-danger rounded rounded-circle badge top-0 ">2</span></button>
+    <button class="bg-red-400 rounded rounded-xl w-20 text-white p-1 ms-5">Login</button>
+  </div>
+ </header>
+
+ <div class="carousel slide" data-bs-theme="dark" id="banner" data-bs-ride="carousel">
+
+  
+  <div class="carousel-inner">
+    <div class="carousel-item active bg-yellow-50" data-bs-interval="2000" style="height: 450px;">
+    <div class="row">
+      <div class="col-6">
+        <div class="p-5 text-left">
+          <div class="text-6xl font-bold">40% OFF on your <br><span class="text-red-400">First Order</span>
+          </div>
+          <div class="m-4 text-md">Use code:FIRSTFOOD to grab your discount.</div>
+          <button class="bg-red-400 p-3 rounded text-white rounded-pill w-40 mt-4">Order Now</button>
+        </div>
+      </div>
+    <div class="col-6 d-flex p-3 justify-content-center align-items-center" style="height:450px">
+      <img src="./public/burger.jpg" width="350">
+    </div>  
+    </div>
+    </div>
+
+    <div class="carousel-item bg-green-100" data-bs-interval="2000" style="height: 450px;">
+    <div class="row">
+      <div class="col-6">
+        <div class="p-5 text-left">
+          <div class="text-6xl font-bold">50% OFF on your <br><span class="text-red-400">First Order</span>
+          </div>
+          <div class="m-4 text-md">Use code:FIRSTFOOD to grab your discount.</div>
+          <button class="bg-red-400 p-3 rounded text-white rounded-pill w-40 mt-4">Grab Now</button>
+        </div>
+      </div>
+    <div class="col-6 d-flex p-3 justify-content-center align-items-center" style="height:400px">
+      <img src="./public/burger.jpg" width="300">
+    </div>  
+    </div>
+    </div>
+    
+    <div class="carousel-indicators">
+      <button data-bs-slide-to="0" class="active rounded rounded-circle" style="width: 10px; height: 10px;" data-bs-target="#banner"></button>
+      <button data-bs-slide-to="1" class="rounded rounded-circle" style="width: 10px; height: 10px;" data-bs-target="#banner"></button>
+    </div>  
+    </div>
+  </div>
+
+  <section class="mt-8">
+    <div class="ps-3">
+      <div class="text-2xl font-bold"> Featured Food Items</div>
+      <div>Hand-picked deliciousness just for you</div>
+      <div class="text-orange-500 font-bold flex justify-content-end">View All<span class="bi bi-arrow-right"></span>
+        </div>
+    </div>
+    <div class="flex justify-between my-4">
+      <div class="card m-2 relative">
+        <div class="absolute top-2 right-2 bg-white px-1 py-1  rounded-full flex items-center gap-1 shadow">
+          <i class="bi bi-star-fill text-yellow-500"></i>
+       <span class="fw-bold">4.5</span>
+       </div>
+        <img class="card-img-top" src="pizza-3.jpg" height="200">
+        <div class="card-body">
+          <div class="font-bold text-lg">BBQ cheespizza</div>
+          <div class="text-sm text-gray-500">Domino's Pizza * 15-25 mins</div>
+        </div>
+        <div class="card-footer flex justify-between">
+          <span class="font-bold text-red-400">$25.50</span>
+          <span class="bi bi-plus bg-gray-400 text-white rounded"></span>
+        </div>
+      </div>
+
+      <div class="card m-2 relative">
+        <div class="absolute top-2 right-2 bg-white px-1 py-1  rounded-full flex items-center gap-1 shadow">
+          <i class="bi bi-star-fill text-yellow-500"></i>
+       <span class="fw-bold">4.7</span>
+       </div>
+        
+        <img class="card-img-top" src="pizza-1.jpg" height="200">
+        <div class="card-body">
+          <div class="font-bold text-lg">Margherita Pizza</div>
+          <div class="text-sm text-gray-500">Domino's Pizza * 15-25 mins</div>
+        </div>
+        <div class="card-footer flex justify-between">
+          <span class="font-bold text-red-400">$15.30</span>
+          <span class="bi bi-plus bg-gray-400 text-white rounded"></span>
+        </div>
+      </div>
+
+      <div class="card m-2 relative">
+        <div class="absolute top-2 right-2 bg-white px-1 py-1  rounded-full flex items-center gap-1 shadow">
+          <i class="bi bi-star-fill text-yellow-500"></i>
+       <span class="fw-bold">4.6</span>
+       </div>
+        <img class="card-img-top" src="burger-1.jpg" height="200">
+        <div class="card-body">
+          <div class="font-bold text-lg">Double BBQ cheesburger</div>
+          <div class="text-sm text-gray-500">Burger King * 15-25 mins</div>
+        </div>
+        <div class="card-footer flex justify-between">
+          <span class="font-bold text-red-400">$19.00</span>
+          <span class="bi bi-plus bg-gray-400 text-white rounded"></span>
+        </div>
+      </div>
+     <div class="card m-2 relative">
+      <div class="absolute top-2 right-2 bg-white px-1 py-1  rounded-full flex items-center gap-1 shadow">
+          <i class="bi bi-star-fill text-yellow-500"></i>
+       <span class="fw-bold">4.4</span>
+       </div>
+      <img class="card-img-top" src="burger-4.jpg" height="200">
+        <div class="card-body">
+          <div class="font-bold text-lg">Veggie Deluxe Burger</div>
+          <div class="text-sm text-gray-500">Burger King * 15-25 mins</div>
+        </div>
+        <div class="card-footer flex justify-between">
+          <span class="font-bold text-red-400">$29.99</span>
+          <span class="bi bi-plus bg-gray-400 text-white rounded"></span>
+        </div>
+      </div>
+    </div> 
+
+    <div class="flex justify-between my-3">
+      <div class="card m-2 relative">
+        <div class="absolute top-2 right-2 bg-white px-1 py-1  rounded-full flex items-center gap-1 shadow">
+          <i class="bi bi-star-fill text-yellow-500"></i>
+       <span class="fw-bold">4.2</span>
+       </div>
+        <img class="card-img-top" src="pizza0.jpg" height="200">
+        <div class="card-body">
+          <div class="font-bold text-lg">Farmhouse Pizza</div>
+          <div class="text-sm text-gray-500">Domino's Pizza * 15-25 mins</div>
+        </div>
+        <div class="card-footer flex justify-between">
+          <span class="font-bold text-red-400">$21.10</span>
+          <span class="bi bi-plus bg-gray-400 text-white rounded"></span>
+        </div>
+      </div>
+      <div class="card m-2 relative">
+        <div class="absolute top-2 right-2 bg-white px-1 py-1  rounded-full flex items-center gap-1 shadow">
+          <i class="bi bi-star-fill text-yellow-500"></i>
+       <span class="fw-bold">4.8</span>
+       </div>
+        <img class="card-img-top" src="burger.jpg" height="200">
+        <div class="card-body">
+          <div class="font-bold text-lg">Double BBQ cheesburger</div>
+          <div class="text-sm text-gray-500">Burger King * 15-25 mins</div>
+        </div>
+        <div class="card-footer flex justify-between">
+          <span class="font-bold text-red-400">$14.44</span>
+          <span class="bi bi-plus bg-gray-400 text-white rounded"></span>
+        </div>
+      </div>
+      <div class="card m-2 relative">
+        <div class="absolute top-2 right-2 bg-white px-1 py-1  rounded-full flex items-center gap-1 shadow">
+          <i class="bi bi-star-fill text-yellow-500"></i>
+       <span class="fw-bold">4.2</span>
+       </div>
+        <img class="card-img-top" src="burger3.jpg" height="200">
+        <div class="card-body">
+          <div class="font-bold text-lg">Double Patty Burger</div>
+          <div class="text-sm text-gray-500">Burger King * 15-25 mins</div>
+        </div>
+        <div class="card-footer flex justify-between">
+          <span class="font-bold text-red-400">$16.20</span>
+          <span class="bi bi-plus bg-gray-400 text-white rounded"></span>
+        </div>
+      </div>
+      <div class="card m-2 relative">
+        <div class="absolute top-2 right-2 bg-white px-1 py-1  rounded-full flex items-center gap-1 shadow">
+          <i class="bi bi-star-fill text-yellow-500"></i>
+       <span class="fw-bold">4.4</span>
+       </div>
+        <img class="card-img-top" src="pizza5.jpg" height="200">
+        <div class="card-body">
+          <div class="font-bold text-lg">Cheese Burst Pizza</div>
+          <div class="text-sm text-gray-500">Domino's Pizza * 15-25 mins</div>
+        </div>
+        <div class="card-footer flex justify-between">
+          <span class="font-bold text-red-400">$18.00</span>
+          <span class="bi bi-plus bg-gray-400 text-white rounded"></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="mt-5 p-4 bg-slate-600 m-2 text-white" style="height:300px;">
+    <div class="row">
+      <div class="col">
+        <div>
+          <span class="bg-red-400 text-white p-1 rounded rounded-lg"><span class="bi bi-fork-knife"></span></span>
+          <span class="font-bold">FoodApp</span>
+        </div>
+        <div class="mt-4 text-white-50 w-75" style="font-size:12px;">Delicious food from your favorite restaurants delivered straight to your doorstep.</div>
+      </div>
+     <div class="col">
+      <ul class="list-unstyled">
+        <li class="font-bold mb-3">Our Services</li>
+        <li>Home Delivery</li>
+        <li class="my-2">Corporate Catering</li>
+        <li>Bulk Orders</li>
+        <li class="my-2">Exclusive Offers</li>
+      </ul>
+     </div>
+     <div class="col">
+      <ul class="list-unstyled">
+        <li class="font-bold mb-3">Company</li>
+        <li>About Us</li>
+        <li class="my-2">Contact Us</li>
+        <li>Terms of Services</li>
+        <li class="my-2">Privacy Policy</li>
+      </ul>
+     </div>
+    <div class="col">
+      <ul class="list-unstyled">
+        <li class="font-bold mb-3">Social</li>
+        <li class="bi bi-facebook">Facebook</li>
+        <li class="my-2 bi bi-twitter-x">Twitter</li>
+        <li class="bi bi-youtube">Youtube</li>
+        <li class="my-2 bi bi-instagram">Instagram</li>  
+      </ul>
+     </div>
+    </div>
+    <div class="flex flex-col items-end">
+      <h5 class="font-bold items-center relative -left-[140px]">Newsletter</h5> 
+      <div class="flex">
+        <input type="text" placeholder="Email Address" class="p-1  bg-gray-500 rounded-l-md outline-none"> <span class="bi bi-send-fill bg-orange-500 px-3 items-center rounded-r-sm p-1"></span>
+      </div>
+    </div> 
+    
+     <div class="row mt-5">
+    <div class="col text-sm text-white-50 text-center"> &copy;Food App copyright 2026
+    </div>
+    </div>
+                                                                
+  </footer>
+</body>
+</html>
